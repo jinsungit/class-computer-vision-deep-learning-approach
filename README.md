@@ -69,6 +69,38 @@ sphinx-autobuild . _build/html
 
 Then open http://127.0.0.1:8000
 
+
+## Github Pages
+
+Here’s what was added and what you should do on GitHub.
+
+Already done in your repo
+.github/workflows/deploy-pages.yml – On every push to main (and via “Run workflow”), it installs requirements-docs.txt, runs make html in source/, sets html_baseurl for a project Pages URL, and deploys source/_build/html with the official Pages actions.
+
+requirements-docs.txt – Added sphinx-book-theme, since conf.py uses sphinx_book_theme (CI would have failed without it).
+
+source/Makefile – The html target now passes $(SPHINXOPTS) so the workflow can inject -D html_baseurl=....
+
+What you do next (one-time on GitHub)
+Commit and push the new/changed files (workflow, requirements-docs.txt, Makefile, plus any source you want on main).
+
+Pages settings: Repo → Settings → Pages → under Build and deployment, set Source to GitHub Actions (not “Deploy from a branch”).
+
+First run: Open Actions, open the latest Deploy documentation to GitHub Pages run, and finish any permissions prompt if GitHub asks to allow the workflow to deploy to Pages.
+
+After it goes green, the site URL will be:
+
+https://<your-username>.github.io/<repo-name>/
+
+(Same pattern the workflow uses for html_baseurl.)
+
+You can trigger a rebuild anytime from the Actions tab → workflow → Run workflow.
+
+If the build ever fails only on CI, open the failed job log; locally you can mirror CI with:
+
+pip install -r requirements-docs.txt && cd source && make html
+
+
 ## Adding content
 
 All docs are **Markdown** (`.md`) using [MyST](https://myst-parser.readthedocs.io/). You can use standard Markdown plus Sphinx directives.

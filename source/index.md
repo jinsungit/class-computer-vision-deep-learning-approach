@@ -58,5 +58,7 @@ chapter07_visual_reasoning
 chapter08_foundation_models
 chapter09_evaluation
 chapter10_bias_ethics
+quiz
+keywords_quiz
 ```
 
