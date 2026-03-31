@@ -1,0 +1,13 @@
+# Sphinx and extensions for online book (HTML + optional PDF)
+# Use pre-built wheels on Windows to avoid building MarkupSafe from source
+MarkupSafe>=2.1.1
+sphinx>=7.0
+sphinx-book-theme>=1.0
+sphinx-rtd-theme>=2.0
+sphinx-copybutton>=0.5
+
+# Optional: build PDF via LaTeX
+# sphinxcontrib-latex (or use latex from your system)
+
+# Markdown support (MyST)
+myst-parser>=2.0
