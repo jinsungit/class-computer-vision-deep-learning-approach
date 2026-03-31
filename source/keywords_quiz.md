@@ -8,15 +8,15 @@
 
 Which situation breaks the usual definition of a function from a set $X$ to a set $Y$?
 
-**A.** Each element of $X$ is assigned exactly one element of $Y$.  
-**B.** Two different inputs in $X$ map to the same output in $Y$.  
-**C.** One input in $X$ is assigned two different outputs in $Y$.  
-**D.** Possible values of $X$ and $Y$ are discrete.
+**A.** Two different inputs in $X$ map to the same output in $Y$.  
+**B.** One input in $X$ is assigned two different outputs in $Y$.  
+**C.** Each element of $X$ is assigned exactly one element of $Y$.  
+**D.** Possible values of $X$ and $Y$ are discrete.  
 
 <details>
 <summary>Show answer</summary>
 
-**C.** A function assigns **exactly one** output to each input; two outputs for the same input is not a function.
+**B.** A function assigns **exactly one** output to each input; two outputs for the same input is not a function.  
 
 </details>
 
@@ -25,14 +25,14 @@ Which situation breaks the usual definition of a function from a set $X$ to a se
 The gradient $\nabla f$ of a function $f$ at a point (when it exists) points in the direction of:
 
 **A.** Steepest **decrease** of $f$.  
-**B.** Steepest **increase** of $f$.  
-**C.** Zero change no matter how you move.  
-**D.** The global minimum.
+**B.** Zero change no matter how you move.  
+**C.** The global minimum.  
+**D.** Steepest **increase** of $f$.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** The gradient points in the direction of **steepest ascent** (steepest increase).
+**D.** The gradient points in the direction of **steepest ascent** (steepest increase).  
 
 </details>
 
@@ -42,13 +42,13 @@ Why do we use gradients when training models?
 
 **A.** They describe how small parameter changes can improve the model.  
 **B.** They describe how good your model is.  
-**C.** They remove the need for any training data.  
-**D.** They only apply to linear models.
+**C.** They only apply to linear models.  
+**D.** They remove the need for any training data.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Gradients link **parameter changes** to **loss changes**, enabling iterative optimization (e.g., gradient descent).
+**A.** Gradients link **parameter changes** to **loss changes**, enabling iterative optimization (e.g., gradient descent).  
 
 </details>
 
@@ -57,14 +57,14 @@ Why do we use gradients when training models?
 For a smooth function $f$, what is typically true at a local minimum where the gradient exists?
 
 **A.** $\nabla f = 0$.  
-**B.** $\nabla f = 1$.  
-**C.** $\nabla f$ is undefined.  
-**D.** $\nabla f$ is any non-zero constant.
+**B.** $\nabla f$ is undefined.  
+**C.** $\nabla f$ is any non-zero constant.  
+**D.** $\nabla f = 1$.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** At an interior local extremum (min or max) of a smooth function, the gradient is typically **zero**.
+**A.** At an interior local extremum (min or max) of a smooth function, the gradient is typically **zero**.  
 
 </details>
 
@@ -72,15 +72,15 @@ For a smooth function $f$, what is typically true at a local minimum where the g
 
 In this course, a **vector** is best thought of as:
 
-**A.** A list (or array) of numbers.  
-**B.** A curve.  
-**C.** A single random number.  
-**D.** A transformation.
+**A.** A single random number.  
+**B.** A list (or array) of numbers.  
+**C.** A curve.  
+**D.** A transformation.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Vectors are usually **ordered collections of numbers** (coordinates in $\mathbb{R}^n$).
+**B.** Vectors are usually **ordered collections of numbers** (coordinates in $\mathbb{R}^n$).  
 
 </details>
 
@@ -89,14 +89,14 @@ In this course, a **vector** is best thought of as:
 A **matrix** is naturally:
 
 **A.** A 2D array of numbers, with rows and columns.  
-**B.** The same dimension as a vector, just written differently.  
-**C.** A single number.  
-**D.** Only used for images, never for text.
+**B.** Only used for images, never for text.  
+**C.** The same dimension as a vector, just written differently.  
+**D.** A single number.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** A matrix is a **rectangular table** of numbers.
+**A.** A matrix is a **rectangular table** of numbers.  
 
 </details>
 
@@ -105,14 +105,14 @@ A **matrix** is naturally:
 In deep learning usage, a **tensor** most often means:
 
 **A.** A multi-dimensional array generalizing scalars, vectors, and matrices.  
-**B.** The input data.  
+**B.** A Python list of strings.  
 **C.** The loss value.  
-**D.** A Python list of strings.
+**D.** The input data.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Tensors generalize to **many axes** (e.g., batch, channels, height, width).
+**A.** Tensors generalize to **many axes** (e.g., batch, channels, height, width).  
 
 </details>
 
@@ -120,15 +120,15 @@ In deep learning usage, a **tensor** most often means:
 
 The **dot product** of two real vectors $\mathbf{u}$ and $\mathbf{v}$ is:
 
-**A.** A **scalar** measuring the similarity between two vectors.  
-**B.** A vector.  
+**A.** A vector.  
+**B.** Always zero if $\mathbf{u} \neq \mathbf{v}$.  
 **C.** Always positive.  
-**D.** Always zero if $\mathbf{u} \neq \mathbf{v}$.
+**D.** A **scalar** measuring the similarity between two vectors.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** $\mathbf{u}\cdot\mathbf{v} = \|\mathbf{u}\|\|\mathbf{v}\|\cos\theta$ — a **scalar**.
+**D.** $\mathbf{u}\cdot\mathbf{v} = \|\mathbf{u}\|\|\mathbf{v}\|\cos\theta$ — a **scalar**.  
 
 </details>
 
@@ -139,14 +139,14 @@ Which choice best matches a **linear** map from $\mathbb{R}^n$ to $\mathbb{R}^m$
 When we want to represent a linear transformation between two vectors, we use:
 
 **A.** A data structure.  
-**B.** A scalar.  
+**B.** A vector.  
 **C.** A matrix.  
-**D.** A vector.
+**D.** A scalar.  
 
 <details>
 <summary>Show answer</summary>
 
-**C.** Linear transformations correspond to **matrix multiplication** (plus a bias in code is an **affine** map).
+**C.** Linear transformations correspond to **matrix multiplication** (plus a bias in code is an **affine** map).  
 
 </details>
 
@@ -154,13 +154,13 @@ When we want to represent a linear transformation between two vectors, we use:
 
 If we have a linear basis in a vector space, we can represent any vector as a linear combination of those basis vectors.
 
-**A.** True.  
-**B.** False.  
+**A.** False.  
+**B.** True.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Bases provide a coordinate system via **unique** linear combinations.
+**B.** Bases provide a coordinate system via **unique** linear combinations.  
 
 </details>
 
@@ -168,15 +168,15 @@ If we have a linear basis in a vector space, we can represent any vector as a li
 
 A **discrete** random variable takes values that are:
 
-**A.** Only integers (always) — no exceptions.  
+**A.** From a **countable** set (you can list outcomes, e.g. coin flip, class label).  
 **B.** Not possible to list all values.  
-**C.** From a **countable** set (you can list outcomes, e.g. coin flip, class label).  
-**D.** Always Gaussian.
+**C.** Always Gaussian.  
+**D.** Only integers (always) — no exceptions.  
 
 <details>
 <summary>Show answer</summary>
 
-**C.** Discrete = outcomes from a **countable** set; continuous often means an interval of $\mathbb{R}$.
+**A.** Discrete = outcomes from a **countable** set; continuous often means an interval of $\mathbb{R}$.  
 
 </details>
 
@@ -184,15 +184,15 @@ A **discrete** random variable takes values that are:
 
 A univariate Gaussian $N(\mu, \sigma^2)$ is mainly specified by:
 
-**A.** Only $\mu$.  
-**B.** Only $\sigma^2$.  
-**C.** Mean $\mu$ and variance $\sigma^2$.  
-**D.** The maximum of the density only.
+**A.** Only $\sigma^2$.  
+**B.** Mean $\mu$ and variance $\sigma^2$.  
+**C.** Only $\mu$.  
+**D.** The maximum of the density only.  
 
 <details>
 <summary>Show answer</summary>
 
-**C.** **Mean** (center) and **variance** (spread) define the standard 1D Gaussian.
+**B.** **Mean** (center) and **variance** (spread) define the standard 1D Gaussian.  
 
 </details>
 
@@ -201,15 +201,15 @@ A univariate Gaussian $N(\mu, \sigma^2)$ is mainly specified by:
 Consider the following scenario: You are given a *photograph* and you need to classify it into either a dragon or a horse. We observe that the image looks both like a dragon and a horse, what should you do with the Bayes theorem-type reasoning? 
 
 
-**A.** I will guess randomly.  
+**A.** Neither of the above.  
 **B.** Must be a dragon because it is more rare (low prior).  
-**C.** Cannot be a dragon because it is more rare (low prior).  
-**D.** Neither of the above.
+**C.** I will guess randomly.  
+**D.** Cannot be a dragon because it is more rare (low prior).  
 
 <details>
 <summary>Show answer</summary>
 
-**C.** Posterior is proportional to **prior** $\times$ **likelihood**; that is the Bayes pattern for classification reasoning.
+**D.** Posterior is proportional to **prior** $\times$ **likelihood**; that is the Bayes pattern for classification reasoning.  
 
 </details>
 
@@ -221,15 +221,15 @@ Consider the following scenario: You are given a *photograph* and you need to cl
 
 In the usual ML story, models:
 
-**A.** Learn patterns from past examples to predict on **new** data.  
+**A.** Must be hand-coded `if` statements only.  
 **B.** Never use data, only closed-form physics formulas.  
-**C.** Memorize one training point and ignore the rest.  
-**D.** Must be hand-coded `if` statements only.
+**C.** Learn patterns from past examples to predict on **new** data.  
+**D.** Memorize one training point and ignore the rest.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** ML uses **past data** to generalize to **future / unseen** instances.
+**C.** ML uses **past data** to generalize to **future / unseen** instances.  
 
 </details>
 
@@ -237,15 +237,15 @@ In the usual ML story, models:
 
 In practice, we don't have full access to the entire data distribution, we have a finite dataset. Which of the following is correct?
 
-**A.** The model we learned from the finite dataset is not useful for the real data distribution.  
-**B.** Since we don't have full access to the entire data distribution, we can't predict the future using the finite dataset.  
-**C.** We can estimate the performance of the model by evaluating it on the dataset at hand.  
-**D.** Neither of the above.
+**A.** Neither of the above.  
+**B.** The model we learned from the finite dataset is not useful for the real data distribution.  
+**C.** Since we don't have full access to the entire data distribution, we can't predict the future using the finite dataset.  
+**D.** We can estimate the performance of the model by evaluating it on the dataset at hand.  
 
 <details>
 <summary>Show answer</summary>
 
-**C.** We separate the data into training, validation, and test sets to estimate the performance of the model learned from the finite dataset on the real data distribution.
+**D.** We separate the data into training, validation, and test sets to estimate the performance of the model learned from the finite dataset on the real data distribution.  
 
 </details>
 
@@ -254,14 +254,14 @@ In practice, we don't have full access to the entire data distribution, we have 
 **Supervised learning** means training with:
 
 **A.** Exact input–output pairs $(x, y)$ where $y$ is the supervision signal.  
-**B.** Only $x$ with no labels.  
-**C.** Random rewards from an environment (for example, a thumb-up from the user by clicking a button).  
-**D.** No data.
+**B.** No data.  
+**C.** Only $x$ with no labels.  
+**D.** Random rewards from an environment (for example, a thumb-up from the user by clicking a button).  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Supervision = provided **labels** or **targets** paired with inputs.
+**A.** Supervision = provided **labels** or **targets** paired with inputs.  
 
 </details>
 
@@ -269,15 +269,15 @@ In practice, we don't have full access to the entire data distribution, we have 
 
 **Classification** predicts:
 
-**A.** A real number like price or temperature.  
+**A.** A set.  
 **B.** A **category** (class) or class probabilities.  
-**C.** A set.  
-**D.** A cluster of data points with no class names.
+**C.** A cluster of data points with no class names.  
+**D.** A real number like price or temperature.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** Outputs are **discrete classes** (possibly as a distribution over classes).
+**B.** Outputs are **discrete classes** (possibly as a distribution over classes).  
 
 </details>
 
@@ -285,15 +285,15 @@ In practice, we don't have full access to the entire data distribution, we have 
 
 **Regression** typically predicts:
 
-**A.** Is this image a cat or a dog?  
+**A.** A permutation of labels.  
 **B.** A **numerical** value.  
 **C.** Only “spam vs not spam.”  
-**D.** A permutation of labels.
+**D.** Is this image a cat or a dog?  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** Regression targets are usually **continuous** quantities.
+**B.** Regression targets are usually **continuous** quantities.  
 
 </details>
 
@@ -302,14 +302,14 @@ In practice, we don't have full access to the entire data distribution, we have 
 You usually pick **classification** over regression NOT because:
 
 **A.** Classification is more well-defined and well-studied.  
-**B.** The target values are from a set of possible values.  
-**C.** You care more about something being present or not.  
-**D.** You have to use a big model.
+**B.** You have to use a big model.  
+**C.** The target values are from a set of possible values.  
+**D.** You care more about something being present or not.  
 
 <details>
 <summary>Show answer</summary>
 
-**D.** Whether to use classification or regression is not related to the size of the model.
+**B.** Whether to use classification or regression is not related to the size of the model.  
 
 </details>
 
@@ -317,15 +317,15 @@ You usually pick **classification** over regression NOT because:
 
 **Unsupervised learning** works with data:
 
-**A.** Without provided labels, to find structure (i.e., clusters).  
-**B.** Only as $(x,y)$ pairs with labels for every point.  
-**C.** With numerical labels.  
-**D.** With discrete labels.
+**A.** With numerical labels.  
+**B.** Without provided labels, to find structure (i.e., clusters).  
+**C.** With discrete labels.  
+**D.** Only as $(x,y)$ pairs with labels for every point.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **No labels** — discover structure from $x$ alone (or weak signals).
+**B.** **No labels** — discover structure from $x$ alone (or weak signals).  
 
 </details>
 
@@ -333,15 +333,15 @@ You usually pick **classification** over regression NOT because:
 
 **K-means** will find:
 
-**A.** K-1 clusters.  
-**B.** K clusters.  
-**C.** K+1 clusters.  
-**D.** Unknown number of clusters.
+**A.** K clusters.  
+**B.** K-1 clusters.  
+**C.** Unknown number of clusters.  
+**D.** K+1 clusters.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** K-means will find K clusters, but it might not be the optimal number of clusters.
+**A.** K-means will find K clusters, but it might not be the optimal number of clusters.  
 
 </details>
 
@@ -349,15 +349,15 @@ You usually pick **classification** over regression NOT because:
 
 **Dimensionality reduction** seeks to:
 
-**A.** Represent data with **fewer** dimensions while keeping useful information.  
-**B.** Duplicate features.  
-**C.** Expand data.  
-**D.** Increase noise in data.
+**A.** Expand data.  
+**B.** Represent data with **fewer** dimensions while keeping useful information.  
+**C.** Duplicate features.  
+**D.** Increase noise in data.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Lower-dimensional representations for visualization, speed, or denoising.
+**B.** Lower-dimensional representations for visualization, speed, or denoising.  
 
 </details>
 
@@ -365,15 +365,15 @@ You usually pick **classification** over regression NOT because:
 
 In supervised learning, a **model** is:
 
-**A.** A map from inputs $x$ to predictions $\hat{y}$ (approximating the true $y$).  
-**B.** Some CSV file on the hard drive.  
-**C.** The optimizer without parameters.  
-**D.** The evaluation metric alone.
+**A.** Some CSV file on the hard drive.  
+**B.** The evaluation metric alone.  
+**C.** A map from inputs $x$ to predictions $\hat{y}$ (approximating the true $y$).  
+**D.** The optimizer without parameters.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** A learned **function** $x \mapsto \hat{y}$.
+**C.** A learned **function** $x \mapsto \hat{y}$.  
 
 </details>
 
@@ -381,15 +381,15 @@ In supervised learning, a **model** is:
 
 Here “linear model” means predictions are:
 
-**A.** A **linear** function of the features (e.g., $\hat{y} = A x$ in vector form, maybe plus bias).  
+**A.** Random guesses.  
 **B.** A deep ReLU network with 100 layers.  
-**C.** A quadratic function $f(x) = ax^2 + bx + c$.  
-**D.** Random guesses.
+**C.** A **linear** function of the features (e.g., $\hat{y} = A x$ in vector form, maybe plus bias).  
+**D.** A quadratic function $f(x) = ax^2 + bx + c$.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Linear** in the feature vector (not necessarily linear in underlying signals if features are fixed).
+**C.** **Linear** in the feature vector (not necessarily linear in underlying signals if features are fixed).  
 
 </details>
 
@@ -400,12 +400,12 @@ We split data mainly to:
 **A.** Meet a legal requirement (e.g., for data privacy).  
 **B.** Train models, tune choices on validation data, and **honestly** estimate generalization on held-out test data.  
 **C.** Delete half the samples on purpose.  
-**D.** Speed up forward pass.
+**D.** Speed up forward pass.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** Separation prevents **cheating** your own evaluation and reduces overtuning.
+**B.** Separation prevents **cheating** your own evaluation and reduces overtuning.  
 
 </details>
 
@@ -413,15 +413,15 @@ We split data mainly to:
 
 **Cross-validation** helps:
 
-**A.** Estimate performance more reliably by repeating train/eval on different partitions.  
-**B.** Remove bias from the model.  
+**A.** Remove bias from the model.  
+**B.** Estimate performance more reliably by repeating train/eval on different partitions.  
 **C.** Guarantee global optimality.  
-**D.** Measure the quality of the dataset.
+**D.** Measure the quality of the dataset.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Averages over splits to reduce **variance** in the performance estimate.
+**B.** Averages over splits to reduce **variance** in the performance estimate.  
 
 </details>
 
@@ -430,14 +430,14 @@ We split data mainly to:
 An evaluation **metric** is:
 
 **A.** A quantity summarizing how good predictions are (accuracy, mAP, RMSE, …).  
-**B.** Not very practical to use.  
-**C.** The batch size.  
-**D.** The name of the optimizer.
+**B.** The batch size.  
+**C.** Not very practical to use.  
+**D.** The name of the optimizer.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Metrics **measure** quality on a dataset or benchmark.
+**A.** Metrics **measure** quality on a dataset or benchmark.  
 
 </details>
 
@@ -445,15 +445,15 @@ An evaluation **metric** is:
 
 **Overfitting** usually means:
 
-**A.** The model fits training data **too** closely and may perform poorly on new data.  
-**B.** The model is too simple.  
-**C.** We trained the model for too few steps.  
-**D.** The dataset is too difficult.
+**A.** We trained the model for too few steps.  
+**B.** The dataset is too difficult.  
+**C.** The model fits training data **too** closely and may perform poorly on new data.  
+**D.** The model is too simple.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **High train, low test** — memorization / high variance.
+**C.** **High train, low test** — memorization / high variance.  
 
 </details>
 
@@ -465,15 +465,15 @@ An evaluation **metric** is:
 
 Which statement is most accurate?
 
-**A.** Deep learning is the only topic in all of AI.  
+**A.** AI and deep learning mean unrelated things.  
 **B.** Deep learning is **one** family of methods inside the broader field of AI.  
-**C.** AI and deep learning mean unrelated things.  
-**D.** Deep learning never uses data.
+**C.** Deep learning never uses data.  
+**D.** Deep learning is the only topic in all of AI.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** **AI** is broad; **deep learning** is a prominent **subset** (neural networks with depth and representation learning).
+**B.** **AI** is broad; **deep learning** is a prominent **subset** (neural networks with depth and representation learning).  
 
 </details>
 
@@ -481,15 +481,15 @@ Which statement is most accurate?
 
 A single **neuron** in a neural network is:
 
-**A.** One small computational unit; a **neural network** combines many such units in layers.  
+**A.** Only a loss value.  
 **B.** The entire trained model by definition.  
 **C.** The same as the full dataset.  
-**D.** Only a loss value.
+**D.** One small computational unit; a **neural network** combines many such units in layers.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Compose** many neurons → network.
+**D.** **Compose** many neurons → network.  
 
 </details>
 
@@ -497,15 +497,15 @@ A single **neuron** in a neural network is:
 
 The **ReLU** activation is:
 
-**A.** $\max(0, z)$.  
-**B.** $1/(1+e^{-z})$.  
-**C.** $\tanh(z)$.  
-**D.** $|z|^2$.
+**A.** $\tanh(z)$.  
+**B.** $|z|^2$.  
+**C.** $1/(1+e^{-z})$.  
+**D.** $\max(0, z)$.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** ReLU “clips” negatives to zero.
+**D.** ReLU “clips” negatives to zero.  
 
 </details>
 
@@ -513,15 +513,15 @@ The **ReLU** activation is:
 
 One **linear layer** typically computes:
 
-**A.** $\mathbf{y} = W\mathbf{x} + \mathbf{b}$ (matrix multiply plus bias).  
-**B.** Spatial max pooling.  
-**C.** Softmax.  
-**D.** A decision tree split.
+**A.** A decision tree split.  
+**B.** Softmax.  
+**C.** $\mathbf{y} = W\mathbf{x} + \mathbf{b}$ (matrix multiply plus bias).  
+**D.** Spatial max pooling.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Linear map = **weight matrix** and optional **bias**.
+**C.** Linear map = **weight matrix** and optional **bias**.  
 
 </details>
 
@@ -529,15 +529,15 @@ One **linear layer** typically computes:
 
 **Stacking** nonlinear layers allows a network to:
 
-**A.** Represent only linear functions overall.  
-**B.** Build **complex** input–output relationships than one linear layer alone.  
-**C.** Remove all parameters.  
-**D.** Ignore the input.
+**A.** Ignore the input.  
+**B.** Remove all parameters.  
+**C.** Represent only linear functions overall.  
+**D.** Build **complex** input–output relationships than one linear layer alone.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** Composition of linear + nonlinear layers yields **nonlinear** functions, allowing the network to approximate complex relationships.
+**D.** Composition of linear + nonlinear layers yields **nonlinear** functions, allowing the network to approximate complex relationships.  
 
 </details>
 
@@ -545,15 +545,15 @@ One **linear layer** typically computes:
 
 Training usually repeats:
 
-**A.** Forward pass → loss → backward pass → parameter update.  
-**B.** Forward pass only, forever.  
-**C.** Random weight changes with no loss.  
-**D.** Sorting the dataset.
+**A.** Random weight changes with no loss.  
+**B.** Forward pass → loss → backward pass → parameter update.  
+**C.** Sorting the dataset.  
+**D.** Forward pass only, forever.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Classic **supervised** neural net training loop.
+**B.** Classic **supervised** neural net training loop.  
 
 </details>
 
@@ -561,15 +561,15 @@ Training usually repeats:
 
 **Backpropagation** computes:
 
-**A.** Gradients of the loss with respect to model parameters.  
-**B.** Gradients of the data with respect to the loss.  
-**C.** Metrics for the trained model.  
-**D.** Another round of forward pass.
+**A.** Gradients of the data with respect to the loss.  
+**B.** Gradients of the loss with respect to model parameters.  
+**C.** Another round of forward pass.  
+**D.** Metrics for the trained model.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Backpropagation is an efficient **gradient** computation method for multiple layers of networks.
+**B.** Backpropagation is an efficient **gradient** computation method for multiple layers of networks.  
 
 </details>
 
@@ -577,15 +577,15 @@ Training usually repeats:
 
 A **mini-batch** is:
 
-**A.** The whole training set every step.  
-**B.** A small **subset** of examples used for one gradient step.  
-**C.** The validation set only.  
-**D.** One convolution kernel.
+**A.** The validation set only.  
+**B.** One convolution kernel.  
+**C.** A small **subset** of examples used for one gradient step.  
+**D.** The whole training set every step.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** Batching balances **noise** vs **memory** vs **speed**.
+**C.** Batching balances **noise** vs **memory** vs **speed**.  
 
 </details>
 
@@ -593,15 +593,15 @@ A **mini-batch** is:
 
 A **loss** for training is:
 
-**A.** A scalar objective we try to **minimize** so the model fits data.  
-**B.** Only used after deployment, never in training.  
-**C.** Always identical to accuracy.  
-**D.** A list of layer names.
+**A.** A list of layer names.  
+**B.** A scalar objective we try to **minimize** so the model fits data.  
+**C.** Only used after deployment, never in training.  
+**D.** Always identical to accuracy.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Loss drives **optimization** (when differentiable).
+**B.** Loss drives **optimization** (when differentiable).  
 
 </details>
 
@@ -609,15 +609,15 @@ A **loss** for training is:
 
 Which is **true**?
 
-**A.** Loss is what training optimizes; metrics summarize performance for analysis and reporting.  
-**B.** Loss and metric must always be the same number.  
-**C.** Metrics are never computed on validation data.  
-**D.** Loss cannot depend on model outputs.
+**A.** Metrics are never computed on validation data.  
+**B.** Loss is what training optimizes; metrics summarize performance for analysis and reporting.  
+**C.** Loss cannot depend on model outputs.  
+**D.** Loss and metric must always be the same number.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Loss** for **learning**; **metrics** for **evaluation** and comparison.
+**B.** **Loss** for **learning**; **metrics** for **evaluation** and comparison.  
 
 </details>
 
@@ -625,15 +625,15 @@ Which is **true**?
 
 In this class, “**neural network**” usually means:
 
-**A.** A parameterized composition of layers trained with data and gradients.  
-**B.** Only a biological brain simulation with no math.  
+**A.** Computer Vision.  
+**B.** A parameterized composition of layers trained with data and gradients.  
 **C.** Some spreadsheet data.  
-**D.** Computer Vision.
+**D.** Only a biological brain simulation with no math.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Learned** layered function, typically **differentiable**.
+**B.** **Learned** layered function, typically **differentiable**.  
 
 </details>
 
@@ -641,15 +641,15 @@ In this class, “**neural network**” usually means:
 
 A **feedforward** network:
 
-**A.** Passes information from input toward output **without** recurrent cycles and lateral connections in the graph.  
-**B.** Is also called a recurrent network.  
-**C.** Has feedback loops when we run the forward pass without running the backward pass.  
-**D.** Cannot have more than one layer.
+**A.** Has feedback loops when we run the forward pass without running the backward pass.  
+**B.** Passes information from input toward output **without** recurrent cycles and lateral connections in the graph.  
+**C.** Cannot have more than one layer.  
+**D.** Is also called a recurrent network.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** No **recurrent connections** along the main forward path (contrast with RNNs). Does not have feedback loops when we just run the forward pass.
+**B.** No **recurrent connections** along the main forward path (contrast with RNNs). Does not have feedback loops when we just run the forward pass.  
 
 </details>
 
@@ -657,15 +657,15 @@ A **feedforward** network:
 
 An **MLP** is typically:
 
-**A.** Alternating **linear** layers and **nonlinear activations** (sometimes dropout etc.).  
-**B.** Only one convolution.  
-**C.** Only k-nearest neighbors.  
-**D.** A purely linear layer with no activations.
+**A.** A purely linear layer with no activations.  
+**B.** Only k-nearest neighbors.  
+**C.** Alternating **linear** layers and **nonlinear activations** (sometimes dropout etc.).  
+**D.** Only one convolution.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Stacked** linear + nonlinear blocks (fully connected).
+**C.** **Stacked** linear + nonlinear blocks (fully connected).  
 
 </details>
 
@@ -674,14 +674,14 @@ An **MLP** is typically:
 **Dropout** during training:
 
 **A.** Randomly zeros some units to reduce heavy dependence on a few units.  
-**B.** Deletes the dataset from disk.  
-**C.** Forces all activations to 1.  
-**D.** Removes backpropagation.
+**B.** Forces all activations to 1.  
+**C.** Removes backpropagation.  
+**D.** Deletes the dataset from disk.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Random** neuron masking as **regularization**.
+**A.** **Random** neuron masking as **regularization**.  
 
 </details>
 
@@ -689,15 +689,15 @@ An **MLP** is typically:
 
 2D convolution slides a **small filter** over an image so **each output location** combines information from:
 
-**A.** All pixels in the image.  
+**A.** Random pixels ignoring position.  
 **B.** A **local neighborhood**.  
-**C.** Only the top row of pixels.  
-**D.** Random pixels ignoring position.
+**C.** All pixels in the image.  
+**D.** Only the top row of pixels.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** **Local receptive field** + **weight sharing** across positions.
+**B.** **Local receptive field** + **weight sharing** across positions.  
 
 </details>
 
@@ -705,15 +705,15 @@ An **MLP** is typically:
 
 If we have a 3x3 input image and a 3x3 filter, and we run 2D convolution once by aligning the filter at the center of the input image, the output size will be:
 
-**A.** 2x2.  
-**B.** 1x1.  
-**C.** 3x3.  
-**D.** 4x4.
+**A.** 4x4.  
+**B.** 2x2.  
+**C.** 1x1.  
+**D.** 3x3.  
 
 <details>
 <summary>Show answer</summary>
 
-**B.** 1x1.
+**C.** 1x1.  
 
 </details>
 
@@ -721,15 +721,15 @@ If we have a 3x3 input image and a 3x3 filter, and we run 2D convolution once by
 
 **CNNs** exploit:
 
-**A.** Multiple small filters to extract useful information.  
-**B.** Fully connecting every pixel to every other at all layers.  
-**C.** Pixel sorting.  
-**D.** Unsupervised clustering.
+**A.** Pixel sorting.  
+**B.** Multiple small filters to extract useful information.  
+**C.** Fully connecting every pixel to every other at all layers.  
+**D.** Unsupervised clustering.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Spatial structure** + **parameter sharing** → efficient vision models.
+**B.** **Spatial structure** + **parameter sharing** → efficient vision models.  
 
 </details>
 
@@ -738,14 +738,14 @@ If we have a 3x3 input image and a 3x3 filter, and we run 2D convolution once by
 If a conv layer learns **K** distinct filters for the given input depth, you typically get:
 
 **A.** **K** output feature maps (channels).  
-**B.** Always one single-channel map regardless of K.  
-**C.** K-1 output classes.  
-**D.** K different datasets.
+**B.** K-1 output classes.  
+**C.** Always one single-channel map regardless of K.  
+**D.** K different datasets.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Number of filters ↔ **output channels** (per spatial location over depth).
+**A.** Number of filters ↔ **output channels** (per spatial location over depth).  
 
 </details>
 
@@ -753,15 +753,15 @@ If a conv layer learns **K** distinct filters for the given input depth, you typ
 
 **Max pooling** over a small spatial window:
 
-**A.** Takes the **maximum** value in each window (often reducing spatial size).  
-**B.** Increases the size of the image.  
-**C.** Computes a score for each class.  
-**D.** Replaces all values with zero.
+**A.** Computes a score for each class.  
+**B.** Replaces all values with zero.  
+**C.** Takes the **maximum** value in each window (often reducing spatial size).  
+**D.** Increases the size of the image.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Downsample** + **local summary**; average pooling uses the **mean** instead.
+**C.** **Downsample** + **local summary**; average pooling uses the **mean** instead.  
 
 </details>
 
@@ -769,15 +769,15 @@ If a conv layer learns **K** distinct filters for the given input depth, you typ
 
 A **fully connected** layer means:
 
-**A.** Every input unit connects to every output unit with its own weight.  
-**B.** A non-linear mapping.  
-**C.** No learnable parameters.  
-**D.** Hard to learn.
+**A.** A non-linear mapping.  
+**B.** No learnable parameters.  
+**C.** Hard to learn.  
+**D.** Every input unit connects to every output unit with its own weight.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Dense **linear** map $W\mathbf{x}+\mathbf{b}$.
+**D.** Dense **linear** map $W\mathbf{x}+\mathbf{b}$.  
 
 </details>
 
@@ -785,15 +785,15 @@ A **fully connected** layer means:
 
 Residual shortcuts in **ResNet** mainly help:
 
-**A.** Train **very deep** networks by easing gradient flow through identity skips.  
-**B.** Remove all nonlinearities.  
-**C.** Increase the size of the image.  
-**D.** Remove convolutions entirely.
+**A.** Remove all nonlinearities.  
+**B.** Train **very deep** networks by easing gradient flow through identity skips.  
+**C.** Remove convolutions entirely.  
+**D.** Increase the size of the image.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Identity + residual** blocks mitigate vanishing/optimization issues in depth.
+**B.** **Identity + residual** blocks mitigate vanishing/optimization issues in depth.  
 
 </details>
 
@@ -803,13 +803,13 @@ Skip connections can give **earlier layers** more direct paths for gradients bec
 
 **A.** Gradients can propagate along shortcuts.  
 **B.** All layers share one single weight.  
-**C.** The loss becomes better.  
-**D.** Training skips the forward pass.
+**C.** Training skips the forward pass.  
+**D.** The loss becomes better.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** **Shortcut paths** improve **gradient** transport in deep stacks.
+**A.** **Shortcut paths** improve **gradient** transport in deep stacks.  
 
 </details>
 
@@ -818,13 +818,13 @@ Skip connections can give **earlier layers** more direct paths for gradients bec
 **U-Net** is best described as:
 
 **A.** A **U-shaped** encoder–decoder with skip connections, often for **dense** per-pixel outputs the same size as the input image.  
-**B.** A classifier that outputs only one label for the whole image only.  
-**C.** A pure language model.  
-**D.** Only logistic regression.
+**B.** A pure language model.  
+**C.** Only logistic regression.  
+**D.** A classifier that outputs only one label for the whole image only.  
 
 <details>
 <summary>Show answer</summary>
 
-**A.** Common for **segmentation**-style **pixel-wise** prediction; skips preserve spatial detail.
+**A.** Common for **segmentation**-style **pixel-wise** prediction; skips preserve spatial detail.  
 
 </details>
