@@ -21,7 +21,7 @@ with output $\mathbf{y} = \mathbf{h}^{(L)}$ (or an additional readout layer). He
 ### Typical structure
 
 
-```{figure} ../_static/imgs/neural_nets/mlp.png
+```{figure} ../_static/imgs/neural_nets/mlp.PNG
 :width: 80%
 :alt: MLP
 

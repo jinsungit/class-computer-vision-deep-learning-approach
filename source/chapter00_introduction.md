@@ -27,7 +27,7 @@ We prioritize understanding:
 
 Take a look at this picture, how many visual tasks can you identify? 
 
-```{figure} _static/imgs/vision_tasks.png
+```{figure} _static/imgs/vision_tasks.PNG
 :width: 80%
 :alt: Example scene for visual tasks
 ```

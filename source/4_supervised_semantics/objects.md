@@ -40,7 +40,7 @@ Two common paradigms:
 
 Concrete scene: a busy crosswalk might contain several pedestrians, two cars, and a traffic light. The model must emit multiple $(\text{class}, \text{box})$ pairs, not one label for the whole image and not a per-pixel map.
 
-```{figure} https://miro.medium.com/v2/resize:fit:1400/1*wZpyZlsX12LVFRjtiVsXkQ.png
+```{figure} https://miro.medium.com/v2/resize:fit:1400/1*wZpyZlsX12LVFRjtiVsXkQ.PNG
 :width: 80%
 :alt: Detection-style visual prediction pipeline
 
@@ -134,7 +134,7 @@ At evaluation time, predictions are usually sorted by **confidence** (high to lo
 
 So a prediction is not “correct” on its own—it must match the **right object** with **enough overlap**.
 
-```{figure} https://upload.wikimedia.org/wikipedia/commons/c/c7/Intersection_over_Union_-_visual_equation.png
+```{figure} https://upload.wikimedia.org/wikipedia/commons/c/c7/Intersection_over_Union_-_visual_equation.PNG
 :width: 70%
 :alt: IoU equals intersection over union
 

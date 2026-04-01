@@ -15,7 +15,7 @@ We will learn about the following attention mechanisms:
 
 [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) is a great resource to understand the Transformer architecture.
 
-```{figure} ../_static/imgs/neural_nets/transformer.png
+```{figure} ../_static/imgs/neural_nets/transformer.PNG
 :width: 80%
 :alt: Transformer architecture
 

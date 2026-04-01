@@ -44,7 +44,7 @@ At a high level, MAE uses a **Vision Transformer (ViT)** as an autoencoder:
   - Runs a smaller transformer that attends over both visible and mask tokens.
   - Predicts pixel values (or patch features) for all patches.
 
-```{figure} https://towardsdatascience.com/wp-content/uploads/2021/12/1l8zPV1sSDmEPbwHTDh5Rzw.png
+```{figure} https://towardsdatascience.com/wp-content/uploads/2021/12/1l8zPV1sSDmEPbwHTDh5Rzw.PNG
 :width: 80%
 :alt: Masked autoencoder architecture
 

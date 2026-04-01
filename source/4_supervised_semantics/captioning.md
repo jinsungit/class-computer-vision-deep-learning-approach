@@ -39,7 +39,7 @@ A good caption tends to be:
 - **Informative**: covers the **main** content, not only a vague “something in a room.”
 - **Fluent**: reads like natural language.
 
-```{figure} https://miro.medium.com/v2/resize:fit:1400/1*z-TEUQ9jfIa5iW8I6ssPew.png
+```{figure} https://miro.medium.com/v2/resize:fit:1400/1*z-TEUQ9jfIa5iW8I6ssPew.PNG
 :width: 80%
 :alt: Image captioning encoder-decoder pipeline
 
@@ -54,7 +54,7 @@ Captioning has two historical layers; in practice **vision–language models (VL
 
 Early and mid-era systems paired a **CNN** (image encoder) with an **RNN or Transformer decoder** trained with **teacher forcing**: at each step, the decoder sees the **ground-truth** previous token during training. At inference, it conditions on **its own** previous predictions—hence **exposure bias**.
 
-```{figure} https://upload.wikimedia.org/wikipedia/commons/c/c7/Seq2seq_RNN_encoder-decoder_with_attention_mechanism%2C_training.png
+```{figure} https://upload.wikimedia.org/wikipedia/commons/c/c7/Seq2seq_RNN_encoder-decoder_with_attention_mechanism%2C_training.PNG
 :width: 85%
 :alt: Seq2seq encoder-decoder with attention, training phase
 

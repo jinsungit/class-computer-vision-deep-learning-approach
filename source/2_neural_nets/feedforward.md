@@ -13,7 +13,7 @@ A feedforward network is composed of a sequence of layers. Each layer is a linea
 
 The input layer is the first layer, and the output layer is the last layer.
 
-```{figure} ../_static/imgs/neural_nets/feedforward1.png
+```{figure} ../_static/imgs/neural_nets/feedforward1.PNG
 :width: 80%
 :alt: Feedforward network architecture
 
@@ -23,7 +23,7 @@ Feedforward network architecture.
 
 #### Feedforward network vs. general networks
 
-```{figure} ../_static/imgs/neural_nets/feedforward2.png
+```{figure} ../_static/imgs/neural_nets/feedforward2.PNG
 :width: 80%
 :alt: Feedforward network architecture vs. general networks
 

@@ -6,7 +6,7 @@ Deep learning vs. machine learning vs. Artificial Intelligence
 
 
 
-```{figure} ../_static/imgs/dl_basics/history.png
+```{figure} ../_static/imgs/dl_basics/history.PNG
 :width: 80%
 :alt: deep learning history.
 
@@ -31,7 +31,7 @@ Note that we are no longer drawing inspiration from biology to build modern neur
 
 
 
-```{figure} ../_static/imgs/dl_basics/neuron.png
+```{figure} ../_static/imgs/dl_basics/neuron.PNG
 :width: 80%
 :alt: neuron.
 
@@ -40,7 +40,7 @@ A single neuron.
 
 
 
-```{figure} ../_static/imgs/dl_basics/neuron2.png
+```{figure} ../_static/imgs/dl_basics/neuron2.PNG
 :width: 80%
 :alt: neuron2.
 
@@ -54,7 +54,7 @@ Mathematical representation of a single neuron.
 ## Activation function
 
 
-```{figure} ../_static/imgs/dl_basics/activation.png
+```{figure} ../_static/imgs/dl_basics/activation.PNG
 :width: 80%
 :alt: activation function.
 
@@ -69,22 +69,14 @@ Activation function.
 
 
 
-```{figure} ../_static/imgs/dl_basics/singlelayer1.png
+```{figure} ../_static/imgs/dl_basics/singlelayer1.PNG
 :width: 80%
 :alt: a single layer.
 
 A single layer.
 ```
 
-```{figure} ../_static/imgs/dl_basics/singlelayer2.png
-:width: 80%
-:alt: a single layer.
-
-A single layer.
-```
-
-
-```{figure} ../_static/imgs/dl_basics/singlelayer3.png
+```{figure} ../_static/imgs/dl_basics/singlelayer2.PNG
 :width: 80%
 :alt: a single layer.
 
@@ -92,7 +84,7 @@ A single layer.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/singlelayer4.png
+```{figure} ../_static/imgs/dl_basics/singlelayer3.PNG
 :width: 80%
 :alt: a single layer.
 
@@ -100,7 +92,15 @@ A single layer.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/singlelayer5.png
+```{figure} ../_static/imgs/dl_basics/singlelayer4.PNG
+:width: 80%
+:alt: a single layer.
+
+A single layer.
+```
+
+
+```{figure} ../_static/imgs/dl_basics/singlelayer5.PNG
 :width: 80%
 :alt: a single layer.
 
@@ -116,14 +116,14 @@ A single layer.
 
 ## Multi-layer
 
-```{figure} ../_static/imgs/dl_basics/multi-layer.png
+```{figure} ../_static/imgs/dl_basics/multi-layer.PNG
 :width: 80%
 :alt: a multi-layer.
 
 A multi-layer network.
 ```
 
-```{figure} ../_static/imgs/dl_basics/multi-layer2.png
+```{figure} ../_static/imgs/dl_basics/multi-layer2.PNG
 :width: 80%
 :alt: a multi-layer2.
 
@@ -131,7 +131,7 @@ A multi-layer network.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/multi-layer3.png
+```{figure} ../_static/imgs/dl_basics/multi-layer3.PNG
 :width: 80%
 :alt: a multi-layer3.
 
@@ -151,7 +151,7 @@ In the context of neural networks, a perceptron is an artificial neuron using th
 --Wikipedia
 
 
-```{figure} ../_static/imgs/dl_basics/perceptron.png
+```{figure} ../_static/imgs/dl_basics/perceptron.PNG
 :width: 80%
 :alt: step function.
 
@@ -174,7 +174,7 @@ Layers allow the neural network to learn more complex functions.
 
 
 
-```{figure} ../_static/imgs/dl_basics/training1.png
+```{figure} ../_static/imgs/dl_basics/training1.PNG
 :width: 80%
 :alt: training of the neural networks.
 
@@ -182,7 +182,7 @@ Training of the neural networks.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/training2.png
+```{figure} ../_static/imgs/dl_basics/training2.PNG
 :width: 80%
 :alt: training of the neural networks.
 
@@ -197,7 +197,7 @@ Training of the neural networks.
 
 We use backpropagation to collect the gradients of the neural network parameters and update them using an optimizer.
 
-```{figure} ../_static/imgs/dl_basics/backprop1.png
+```{figure} ../_static/imgs/dl_basics/backprop1.PNG
 :width: 80%
 :alt: backpropagation.
 
@@ -205,7 +205,7 @@ Backpropagation.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/backprop2.png
+```{figure} ../_static/imgs/dl_basics/backprop2.PNG
 :width: 80%
 :alt: backpropagation.
 
@@ -217,22 +217,14 @@ Backpropagation.
 ## Summary: key elements in deep learning
 
 
-```{figure} ../_static/imgs/dl_basics/key1.png
+```{figure} ../_static/imgs/dl_basics/key1.PNG
 :width: 80%
 :alt: key elements in deep learning.
 
 Key elements in deep learning.
 ```
 
-```{figure} ../_static/imgs/dl_basics/key2.png
-:width: 80%
-:alt: key elements in deep learning.
-
-Key elements in deep learning.
-```
-
-
-```{figure} ../_static/imgs/dl_basics/key3.png
+```{figure} ../_static/imgs/dl_basics/key2.PNG
 :width: 80%
 :alt: key elements in deep learning.
 
@@ -240,7 +232,7 @@ Key elements in deep learning.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/key4.png
+```{figure} ../_static/imgs/dl_basics/key3.PNG
 :width: 80%
 :alt: key elements in deep learning.
 
@@ -248,7 +240,7 @@ Key elements in deep learning.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/key5.png
+```{figure} ../_static/imgs/dl_basics/key4.PNG
 :width: 80%
 :alt: key elements in deep learning.
 
@@ -256,7 +248,7 @@ Key elements in deep learning.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/key6.png
+```{figure} ../_static/imgs/dl_basics/key5.PNG
 :width: 80%
 :alt: key elements in deep learning.
 
@@ -264,7 +256,7 @@ Key elements in deep learning.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/key7.png
+```{figure} ../_static/imgs/dl_basics/key6.PNG
 :width: 80%
 :alt: key elements in deep learning.
 
@@ -272,7 +264,15 @@ Key elements in deep learning.
 ```
 
 
-```{figure} ../_static/imgs/dl_basics/key8.png
+```{figure} ../_static/imgs/dl_basics/key7.PNG
+:width: 80%
+:alt: key elements in deep learning.
+
+Key elements in deep learning.
+```
+
+
+```{figure} ../_static/imgs/dl_basics/key8.PNG
 :width: 80%
 :alt: key elements in deep learning.
 

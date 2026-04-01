@@ -15,7 +15,7 @@ Machine Learning is about predicting the future based on the past.
 
 
 
-```{figure} ../_static/imgs/ml_basics/ml.png
+```{figure} ../_static/imgs/ml_basics/ml.PNG
 :width: 80%
 :alt: what is machine learning.
 
@@ -39,7 +39,7 @@ flowchart LR
 ```
 
 
-```{figure} ../_static/imgs/ml_basics/ml_paradigm.png
+```{figure} ../_static/imgs/ml_basics/ml_paradigm.PNG
 :width: 80%
 :alt: machine learning paradigm.
 
@@ -65,7 +65,7 @@ $$
 <br>
 
 
-```{figure} ../_static/imgs/ml_basics/formulation.png
+```{figure} ../_static/imgs/ml_basics/formulation.PNG
 :width: 80%
 :alt: formulation of learning.
 
@@ -83,7 +83,7 @@ $$
 
 
 
-```{figure} ../_static/imgs/ml_basics/formulation_practice.png
+```{figure} ../_static/imgs/ml_basics/formulation_practice.PNG
 :width: 80%
 :alt: formulation of learning in practice.
 
@@ -107,7 +107,7 @@ Formulation of learning in practice.
 
 
 
-```{figure} ../_static/imgs/ml_basics/supervised.png
+```{figure} ../_static/imgs/ml_basics/supervised.PNG
 :width: 80%
 :alt: supervised learning.
 
@@ -123,7 +123,7 @@ Supervised learning.
 ### Classification
 
 
-```{figure} ../_static/imgs/ml_basics/classification.png
+```{figure} ../_static/imgs/ml_basics/classification.PNG
 :width: 80%
 :alt: classification.
 
@@ -133,7 +133,7 @@ Classification.
 
 
 
-```{figure} ../_static/imgs/ml_basics/classification2.png
+```{figure} ../_static/imgs/ml_basics/classification2.PNG
 :width: 80%
 :alt: classification2.
 
@@ -143,7 +143,7 @@ Classification.
 
 
 
-```{figure} ../_static/imgs/ml_basics/classification3.png
+```{figure} ../_static/imgs/ml_basics/classification3.PNG
 :width: 80%
 :alt: classification3.
 
@@ -159,7 +159,7 @@ Classification.
 
 
 
-```{figure} ../_static/imgs/ml_basics/regression.png
+```{figure} ../_static/imgs/ml_basics/regression.PNG
 :width: 80%
 :alt: regression.
 
@@ -170,7 +170,7 @@ What ist the difference between classification and regression?
 
 
 
-```{figure} ../_static/imgs/ml_basics/regression_vs_classification.png
+```{figure} ../_static/imgs/ml_basics/regression_vs_classification.PNG
 :width: 80%
 :alt: regression vs classification.
 
@@ -187,7 +187,7 @@ Classification is a more well-defined and well-studied problem than regression. 
 
 
 
-```{figure} ../_static/imgs/ml_basics/unsupervised.png
+```{figure} ../_static/imgs/ml_basics/unsupervised.PNG
 :width: 80%
 :alt: unsupervised learning.
 
@@ -203,7 +203,7 @@ Unsupervised learning.
 
 
 
-```{figure} ../_static/imgs/ml_basics/clustering.png
+```{figure} ../_static/imgs/ml_basics/clustering.PNG
 :width: 80%
 :alt: clustering.
 
@@ -219,7 +219,7 @@ Clustering using K-means.
 
 
 
-```{figure} ../_static/imgs/ml_basics/dimension_reduction.png
+```{figure} ../_static/imgs/ml_basics/dimension_reduction.PNG
 :width: 80%
 :alt: dimensionality reduction.
 
@@ -236,7 +236,7 @@ Dimensionality reduction.
 What is a model for machine learning?
 
 
-```{figure} ../_static/imgs/ml_basics/model.png
+```{figure} ../_static/imgs/ml_basics/model.PNG
 :width: 80%
 :alt: model.
 
@@ -252,7 +252,7 @@ Model.
 ### Nearest neighbor
 
 
-```{figure} ../_static/imgs/ml_basics/nearestneighbor.png
+```{figure} ../_static/imgs/ml_basics/nearestneighbor.PNG
 :width: 80%
 :alt: nearest neighbor.
 
@@ -268,7 +268,7 @@ Nearest neighbor.
 
 
 
-```{figure} ../_static/imgs/ml_basics/linear.png
+```{figure} ../_static/imgs/ml_basics/linear.PNG
 :width: 80%
 :alt: linear models.
 
@@ -277,7 +277,7 @@ Linear models.
 
 
 
-```{figure} ../_static/imgs/ml_basics/linear2.png
+```{figure} ../_static/imgs/ml_basics/linear2.PNG
 :width: 80%
 :alt: linear models.
 
@@ -295,7 +295,7 @@ Linear models.
 
 
 
-```{figure} ../_static/imgs/ml_basics/decision_trees.png
+```{figure} ../_static/imgs/ml_basics/decision_trees.PNG
 :width: 80%
 :alt: decision trees.
 
@@ -330,7 +330,7 @@ It tells you how good your model will perform *in the future*.
 
 
 
-```{figure} ../_static/imgs/ml_basics/splits.png
+```{figure} ../_static/imgs/ml_basics/splits.PNG
 :width: 80%
 :alt: train/val/test splits.
 
@@ -340,7 +340,7 @@ Train/val/test splits.
 
 
 
-```{figure} ../_static/imgs/ml_basics/splits2.png
+```{figure} ../_static/imgs/ml_basics/splits2.PNG
 :width: 80%
 :alt: train/val/test splits2.
 
@@ -356,7 +356,7 @@ Train/val/test splits.
 
 
 
-```{figure} ../_static/imgs/ml_basics/cross-validation.png
+```{figure} ../_static/imgs/ml_basics/cross-validation.PNG
 :width: 80%
 :alt: cross-validation.
 
@@ -366,7 +366,7 @@ Cross-validation.
 
 
 
-```{figure} ../_static/imgs/ml_basics/cross-validation2.png
+```{figure} ../_static/imgs/ml_basics/cross-validation2.PNG
 :width: 80%
 :alt: cross-validation2.
 
@@ -383,7 +383,7 @@ Cross-validation.
 
 
 
-```{figure} ../_static/imgs/ml_basics/metric.png
+```{figure} ../_static/imgs/ml_basics/metric.PNG
 :width: 80%
 :alt: metric.
 
@@ -398,7 +398,7 @@ Metric.
 ### Overfitting
 
 
-```{figure} ../_static/imgs/ml_basics/overfitting.png
+```{figure} ../_static/imgs/ml_basics/overfitting.PNG
 :width: 80%
 :alt: overfitting.
 

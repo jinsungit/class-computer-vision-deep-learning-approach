@@ -37,7 +37,7 @@ SimCLR architectural components:
 - A **projection head** (2-3 layer MLP) that maps features to a space for contrastive training.
 - No separate teacher network (unlike DINO), just a single encoder+projection head trained end-to-end.
 
-```{figure} https://pytorch.org/tutorials/_images/simclr.png
+```{figure} https://pytorch.org/tutorials/_images/simclr.PNG
 :width: 80%
 :alt: SimCLR self-supervised learning pipeline
 

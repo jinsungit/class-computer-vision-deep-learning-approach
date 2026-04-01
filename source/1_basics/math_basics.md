@@ -38,7 +38,7 @@ Example:
 Visualization of a function:
 
 
-```{figure} ../_static/imgs/math_basics/function.png
+```{figure} ../_static/imgs/math_basics/function.PNG
 :width: 80%
 :alt: Function
 
@@ -48,7 +48,7 @@ Visualization of a 2D function and a 3D function.
 What is *not* a function?
 
 
-```{figure} ../_static/imgs/math_basics/not_function.png
+```{figure} ../_static/imgs/math_basics/not_function.PNG
 :width: 80%
 :alt: Not a Function
 
@@ -60,7 +60,7 @@ If there are multiple outputs for the same input, it is not a function.
 Definition: A function is continuous if it is continuous at every point in its domain.
 
 
-```{figure} ../_static/imgs/math_basics/cont_func.png
+```{figure} ../_static/imgs/math_basics/cont_func.PNG
 :width: 40%
 :alt: Not a continous function 
 
@@ -75,7 +75,7 @@ Not a continous function because it has a discontinuity.
 Definition: The derivative of a function $f(x)$ is the rate of change of the function at a point $x$.
 
 
-```{figure} ../_static/imgs/math_basics/derivative.png
+```{figure} ../_static/imgs/math_basics/derivative.PNG
 :width: 80%
 :alt: Derivative measures the rate of change of a function.
 
@@ -90,7 +90,7 @@ Example:
 - $f'(x) = ?$
 
 
-```{figure} ../_static/imgs/math_basics/derivative2.png
+```{figure} ../_static/imgs/math_basics/derivative2.PNG
 :width: 80%
 :alt: Derivative example.
 
@@ -112,7 +112,7 @@ Example:
 - $\frac{\partial f}{\partial y} = ?$
 
 
-```{figure} ../_static/imgs/math_basics/partial_d.png
+```{figure} ../_static/imgs/math_basics/partial_d.PNG
 :width: 80%
 :alt: Partial derivative.
 
@@ -128,7 +128,7 @@ Computing the partial derivative of a function with two variables.
 
 Definition: The gradient of a function $f(x, y)$ is the vector of its partial derivatives.
 
-```{figure} ../_static/imgs/math_basics/grad1.png
+```{figure} ../_static/imgs/math_basics/grad1.PNG
 :width: 80%
 :alt: gradient.
 
@@ -145,7 +145,7 @@ Example:
 
 Visually, what is the gradient of a function? 
 
-```{figure} ../_static/imgs/math_basics/grad2.png
+```{figure} ../_static/imgs/math_basics/grad2.PNG
 :width: 80%
 :alt: gradient.
 
@@ -160,7 +160,7 @@ Gradient intuition.
 Definition: The minimum of a function $f(x)$ is the point where the function is at its lowest value, and the maximum of a function $f(x)$ is the point where the function is at its highest value.
 
 
-```{figure} ../_static/imgs/math_basics/minmax.png
+```{figure} ../_static/imgs/math_basics/minmax.PNG
 :width: 80%
 :alt: finding the min of a function.
 
@@ -188,7 +188,7 @@ Linear algebra is the study of vectors and matrices.
 - Matrices are used to represent linear transformations.
 - Operations on vectors and matrices are used to solve linear systems of equations.
 
-```{figure} ../_static/imgs/math_basics/la.png
+```{figure} ../_static/imgs/math_basics/la.PNG
 :width: 80%
 :alt: Linear algebra.
 
@@ -215,7 +215,7 @@ Example:
 
 Visually, what is a vector?
 
-```{figure} ../_static/imgs/math_basics/vector.png
+```{figure} ../_static/imgs/math_basics/vector.PNG
 :width: 80%
 :alt: vector.
 
@@ -237,7 +237,7 @@ Example:
 
 Visually, what is a matrix?
 
-```{figure} ../_static/imgs/math_basics/mat.png
+```{figure} ../_static/imgs/math_basics/mat.PNG
 :width: 80%
 :alt: matrix.
 
@@ -245,7 +245,7 @@ Matrix can transform a point to a different position.
 ```
 
 
-```{figure} ../_static/imgs/math_basics/mat2.png
+```{figure} ../_static/imgs/math_basics/mat2.PNG
 :width: 80%
 :alt: matrix transformation.
 
@@ -259,7 +259,7 @@ Matrix transformation.
 
 Definition: A tensor is a multi-dimensional array of numbers.
 
-```{figure} ../_static/imgs/math_basics/tensor.png
+```{figure} ../_static/imgs/math_basics/tensor.PNG
 :width: 80%
 :alt: tensor.
 
@@ -296,7 +296,7 @@ Example:
 - Vector dot product
 - Vector cross product
 
-```{figure} ../_static/imgs/math_basics/vector_op.png
+```{figure} ../_static/imgs/math_basics/vector_op.PNG
 :width: 80%
 :alt: vector operations.
 
@@ -314,7 +314,7 @@ Example:
 - Transpose
 - Inverse
 
-```{figure} ../_static/imgs/math_basics/mat_op.png
+```{figure} ../_static/imgs/math_basics/mat_op.PNG
 :width: 80%
 :alt: matrix operations.
 
@@ -335,7 +335,7 @@ Example:
 Eigenvector is the direction of the linear transform that is stretched by the matrix but not rotated.
 
 
-```{figure} ../_static/imgs/math_basics/eigen.png
+```{figure} ../_static/imgs/math_basics/eigen.PNG
 :width: 80%
 :alt: eigenvector.
 
@@ -365,7 +365,7 @@ Example:
 - $v = 1 \cdot 1 + 2 \cdot x + 3 \cdot x^2 + 4 \cdot x^3$
 
 
-```{figure} ../_static/imgs/math_basics/basis.png
+```{figure} ../_static/imgs/math_basics/basis.PNG
 :width: 80%
 :alt: basis.
 
@@ -408,7 +408,7 @@ Types of random variables:
 
 Definition: A probability distribution describes how the probabilities are distributed over the possible values of a random variable.
 
-```{figure} ../_static/imgs/math_basics/dist.png
+```{figure} ../_static/imgs/math_basics/dist.PNG
 :width: 80%
 :alt: distribution.
 
@@ -432,7 +432,7 @@ Example: For a fair die, $P(X = 1) = P(X = 2) = \ldots = P(X = 6) = \frac{1}{6}$
 
 Definition: A Gaussian (or normal) distribution is a continuous probability distribution characterized by its mean $\mu$ and variance $\sigma^2$.
 
-```{figure} ../_static/imgs/math_basics/gaussian.png
+```{figure} ../_static/imgs/math_basics/gaussian.PNG
 :width: 80%
 :alt: 1D gaussian.
 
@@ -461,7 +461,7 @@ Visually, what does a Gaussian distribution look like?
 
 Definition: A mixture of Gaussians is a probability distribution that is a weighted sum of multiple Gaussian distributions.
 
-```{figure} ../_static/imgs/math_basics/mog.png
+```{figure} ../_static/imgs/math_basics/mog.PNG
 :width: 80%
 :alt: mixture of gaussians.
 
@@ -514,7 +514,7 @@ Also, ChatGPT uses sampling to generate text.
 
 Bayes' theorem relates the conditional probability of an event given evidence to the prior probability and likelihood.
 
-```{figure} ../_static/imgs/math_basics/bayes.png
+```{figure} ../_static/imgs/math_basics/bayes.PNG
 :width: 80%
 :alt: bayes theorem.
 

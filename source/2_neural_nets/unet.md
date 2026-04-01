@@ -17,7 +17,7 @@ $$
 
 where $\mathbf{s}^{(\ell)}$ are **saved** skip tensors and $\mathbf{z}$ is the **bottleneck** representation. The final $\mathbf{y}$ has shape $H \times W \times C_{\mathrm{out}}$ (e.g., $C_{\mathrm{out}}$ class logits per pixel).
 
-```{figure} https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png
+```{figure} https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.PNG
 :width: 88%
 :alt: U-Net encoder-decoder with skip connections between matching resolutions
 
@@ -78,7 +78,7 @@ The encoder is a **CNN stack** that trades spatial resolution for **receptive fi
 
 Skip connections are **shortcuts** across the bottleneck. Without them, the decoder would only see a **low-resolution** code and would struggle to place **exact boundaries**. Concatenation lets the decoder **fuse** “where” (encoder, high $H,W$) with “what” (decoder pathway from $\mathbf{z}$).
 
-```{figure} https://upload.wikimedia.org/wikipedia/commons/2/2b/Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png
+```{figure} https://upload.wikimedia.org/wikipedia/commons/2/2b/Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.PNG
 :width: 82%
 :alt: Example U-Net producing k spatial masks for an RGB input
 

@@ -51,7 +51,7 @@ Concrete intuitions:
 
 Same backbone, different head semantics: in code, both setups often use `Linear(in_features, C)`; the difference is **softmax + CE** vs **sigmoid + BCE**, and whether `targets` are class indices or a `(B, C)` binary matrix.
 
-```{figure} https://learnopencv.com/wp-content/uploads/2023/01/Convolutional-Neural-Networks.png
+```{figure} https://learnopencv.com/wp-content/uploads/2023/01/Convolutional-Neural-Networks.PNG
 :width: 80%
 :alt: CNN feature hierarchy
 

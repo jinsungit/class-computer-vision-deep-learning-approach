@@ -34,7 +34,7 @@ VAEs add a probabilistic twist:
 - We **sample** $z$ from this distribution during training.
 - This makes the latent space **smooth** and **generative**: nearby points correspond to similar images, and we can sample new images by sampling new $z$.
 
-```{figure} https://lilianweng.github.io/posts/2018-08-12-vae/VQ-VAE.png
+```{figure} https://lilianweng.github.io/posts/2018-08-12-vae/VQ-VAE.PNG
 :width: 80%
 :alt: Autoencoder-style encoder-decoder architecture
 

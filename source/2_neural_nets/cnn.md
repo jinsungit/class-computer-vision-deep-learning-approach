@@ -4,7 +4,7 @@ A **convolutional neural network (CNN)** is a feedforward model built from **con
 
 ### Convolution
 
-```{figure} ../_static/imgs/neural_nets/conv.png
+```{figure} ../_static/imgs/neural_nets/conv.PNG
 :width: 80%
 :alt: Convolution
 
@@ -12,14 +12,14 @@ Convolution.
 ```
 
 
-```{figure} ../_static/imgs/neural_nets/conv2.png
+```{figure} ../_static/imgs/neural_nets/conv2.PNG
 :width: 80%
 :alt: Convolution
 
 Convolution.
 ```
 
-```{figure} ../_static/imgs/neural_nets/conv3.png
+```{figure} ../_static/imgs/neural_nets/conv3.PNG
 :width: 80%
 :alt: Convolution
 
@@ -59,7 +59,7 @@ No padding, stride 1: the output map is **smaller** than the input (unless the k
 “Same” padding (when stride $=1$): the output **height and width** match the input, so deeper stacks do not shrink every layer.
 ```
 
-```{figure} ../_static/imgs/neural_nets/conv_example.png
+```{figure} ../_static/imgs/neural_nets/conv_example.PNG
 :width: 80%
 :alt: 2D convolution example
 
@@ -98,7 +98,7 @@ $$
 A CNN stacks **conv $\rightarrow$ activation** blocks, often with **pooling** or **strided conv** for downsampling, so that early layers respond to **edges and textures**, and deeper layers build **parts and objects**. The final **spatial** maps are **vectorized** (global average pooling is common) and fed to a small **MLP** head for classification or regression.
 
 
-```{figure} ../_static/imgs/neural_nets/cnn.png
+```{figure} ../_static/imgs/neural_nets/cnn.PNG
 :width: 80%
 :alt: CNN
 
@@ -120,7 +120,7 @@ A CNN architecture (VGG-16).
 Pooling increases **translation tolerance** in the pooled regions but **throws away** spatial detail—design choice depends on the task.
 
 
-```{figure} ../_static/imgs/neural_nets/pooling.png
+```{figure} ../_static/imgs/neural_nets/pooling.PNG
 :width: 80%
 :alt: Pooling
 
@@ -136,7 +136,7 @@ After enough conv layers, the network may **flatten** $C\times H\times W$ featur
 ### Residual connections
 
 
-```{figure} ../_static/imgs/neural_nets/res1.png
+```{figure} ../_static/imgs/neural_nets/res1.PNG
 :width: 80%
 :alt: Residual connections
 
@@ -144,7 +144,7 @@ After enough conv layers, the network may **flatten** $C\times H\times W$ featur
 Residual connections in neural networks allows to train very deep networks.
 ```
 
-```{figure} ../_static/imgs/neural_nets/res2.png
+```{figure} ../_static/imgs/neural_nets/res2.PNG
 :width: 80%
 :alt: Residual connections
 
@@ -153,7 +153,7 @@ Residual connections in neural networks allows to train very deep networks.
 ```
 
 
-```{figure} ../_static/imgs/neural_nets/res3.png
+```{figure} ../_static/imgs/neural_nets/res3.PNG
 :width: 80%
 :alt: Residual connections
 
@@ -183,7 +183,7 @@ When shapes differ, the skip is **projected** (e.g., $1\times 1$ conv) so $F(\ma
 
 ### Summary
 
-```{figure} ../_static/imgs/neural_nets/summary_cnn.png
+```{figure} ../_static/imgs/neural_nets/summary_cnn.PNG
 :width: 80%
 :alt: Summary of CNNs
 

@@ -33,7 +33,7 @@ Two common tasks:
 
 Concrete contrast: in a street photo, semantic segmentation might paint every person the same color; instance segmentation would give each pedestrian a distinct mask so a counting or tracking system can tell them apart.
 
-```{figure} https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png
+```{figure} https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.PNG
 :width: 80%
 :alt: U-Net architecture for segmentation
 
@@ -118,14 +118,14 @@ $$
 
 IoU is 1 when the masks match exactly, and 0 when they do not overlap. It penalizes both missed regions and spurious blobs.
 
-```{figure} https://upload.wikimedia.org/wikipedia/commons/c/c7/Intersection_over_Union_-_visual_equation.png
+```{figure} https://upload.wikimedia.org/wikipedia/commons/c/c7/Intersection_over_Union_-_visual_equation.PNG
 :width: 72%
 :alt: Intersection over Union equals intersection area divided by union area
 
 IoU is the ratio of overlap to union (identical to the Jaccard index for binary masks). The same definition applies per class in multi-class segmentation by treating each class as a binary mask versus the rest.
 ```
 
-```{figure} https://upload.wikimedia.org/wikipedia/commons/e/e6/Intersection_over_Union_-_poor%2C_good_and_excellent_score.png
+```{figure} https://upload.wikimedia.org/wikipedia/commons/e/e6/Intersection_over_Union_-_poor%2C_good_and_excellent_score.PNG
 :width: 85%
 :alt: Three bounding boxes showing poor, good, and excellent IoU scores
 
