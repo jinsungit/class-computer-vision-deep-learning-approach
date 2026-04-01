@@ -1,0 +1,14 @@
+/*
+ * Right-side page TOC behavior:
+ * - Keep H3 entries available (show_toc_level=3)
+ * - Collapse non-active H2 sections
+ * - Expand the H2 section that contains the active anchor
+ */
+.bd-toc-nav .toc-h2 > ul.section-nav {
+  display: none;
+}
+
+.bd-toc-nav .toc-h2:has(> a.active) > ul.section-nav,
+.bd-toc-nav .toc-h2:has(ul a.active) > ul.section-nav {
+  display: block;
+}

@@ -42,6 +42,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
 html_js_files = ["pathfix.js"]
+html_css_files = ["custom.css"]
 html_theme_options = {
     # Ensure the right-side "Contents" includes subsection headings (###).
     "show_toc_level": 3,
