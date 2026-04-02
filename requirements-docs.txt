@@ -11,3 +11,6 @@ sphinx-copybutton>=0.5
 
 # Markdown support (MyST)
 myst-parser>=2.0
+
+# Diagrams from ```mermaid fences (requires myst_fence_as_directive in conf.py)
+sphinxcontrib-mermaid>=0.9

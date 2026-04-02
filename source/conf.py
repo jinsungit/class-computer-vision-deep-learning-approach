@@ -20,6 +20,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx_copybutton",  # one-click copy for code blocks
+    "sphinxcontrib.mermaid",
 ]
 
 # Treat .md files as MyST Markdown (so math and directives work)
@@ -33,6 +34,9 @@ myst_enable_extensions = [
     "dollarmath",  # $...$, $$...$$
     "amsmath",     # \[...\], equation environments
 ]
+
+# Treat ```mermaid code fences as sphinxcontrib.mermaid directives (not plain code)
+myst_fence_as_directive = ["mermaid"]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]

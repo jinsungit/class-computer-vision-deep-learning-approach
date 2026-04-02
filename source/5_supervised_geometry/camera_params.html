@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinhole Camera: Intrinsics & Extrinsics</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #1a1a2e; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        #labels { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        .label { 
+            position: absolute; background: rgba(20, 20, 30, 0.85); color: #fff;
+            padding: 6px 10px; border-radius: 6px; font-size: 13px; 
+            transform: translate(-50%, -50%); border: 1px solid #4a4a6a; 
+            white-space: nowrap; transition: opacity 0.2s;
+        }
+        #instructions {
+            position: absolute; bottom: 20px; left: 20px; color: #aaa;
+            background: rgba(0,0,0,0.7); padding: 15px; border-radius: 8px;
+            pointer-events: none; line-height: 1.5; font-size: 14px;
+        }
+        .math { font-family: monospace; color: #4db8ff; }
+    </style>
+</head>
+<body>
+    <div id="labels">
+        <div id="label-pinhole" class="label">Pinhole (0,0,0)</div>
+        <div id="label-imageplane" class="label">Image Plane</div>
+    </div>
+    
+    <div id="instructions">
+        <strong>Observer Controls:</strong> Left Click=Orbit, Right Click=Pan, Scroll=Zoom<br><br>
+        <strong>Extrinsics [R|t]:</strong> Maps World &rarr; Camera Local Space<br>
+        <strong>Intrinsics (K):</strong> Maps Camera Local &rarr; 2D Pixel Array<br>
+        <span class="math">x_p = f_x(X_c/Z_c) + c_x</span><br>
+        <span class="math">y_p = f_y(Y_c/Z_c) + c_y</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+
+    <script>
+        // 1. Scene Setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(60, 40, 60);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.target.set(0, 0, -10);
+
+        // World Grid
+        const grid = new THREE.GridHelper(100, 100, 0x555555, 0x222222);
+        grid.position.y = -15;
+        scene.add(grid);
+
+        // 2. Camera Rig (Groups Extrinsics)
+        const cameraRig = new THREE.Group();
+        scene.add(cameraRig);
+
+        // Pinhole Object
+        const pinholeGeo = new THREE.SphereGeometry(0.6, 16, 16);
+        const pinholeMat = new THREE.MeshBasicMaterial({ color: 0xffcc00 });
+        const pinhole = new THREE.Mesh(pinholeGeo, pinholeMat);
+        cameraRig.add(pinhole);
+
+        // Optical Axis
+        const axisMat = new THREE.LineBasicMaterial({ color: 0x888888, dashSize: 1, gapSize: 1 });
+        const axisGeo = new THREE.BufferGeometry().setFromPoints([
+            new THREE.Vector3(0, 0, -40), new THREE.Vector3(0, 0, 20)
+        ]);
+        const opticalAxis = new THREE.Line(axisGeo, axisMat);
+        opticalAxis.computeLineDistances();
+        cameraRig.add(opticalAxis);
+
+        // Image Plane (Fixed physical distance for 3D visualization)
+        const PLANE_DISTANCE = 15; 
+        const planeGeo = new THREE.PlaneGeometry(35, 35);
+        const planeMat = new THREE.MeshBasicMaterial({ color: 0x4db8ff, transparent: true, opacity: 0.1, side: THREE.DoubleSide });
+        const imagePlane = new THREE.Mesh(planeGeo, planeMat);
+        imagePlane.position.z = PLANE_DISTANCE; 
+        cameraRig.add(imagePlane);
+
+        const planeBorder = new THREE.LineSegments(new THREE.EdgesGeometry(planeGeo), new THREE.LineBasicMaterial({ color: 0x4db8ff }));
+        imagePlane.add(planeBorder);
+
+        // 3. 3D Objects Setup
+        const objects = [];
+
+        function createSceneObject(geometry, color, initialPos) {
+            // Original Solid Object (Stays in World Space)
+            const material = new THREE.MeshLambertMaterial({ color: color });
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.position.copy(initialPos);
+            scene.add(mesh);
+
+            // Projected 2D Wireframe (Attached to Camera Rig / Image Plane Space)
+            const projMaterial = new THREE.MeshBasicMaterial({ color: color, wireframe: true });
+            const projMesh = new THREE.Mesh(geometry.clone(), projMaterial);
+            cameraRig.add(projMesh);
+
+            // Projection Rays
+            const lineCount = geometry.attributes.position.count;
+            const linesGeo = new THREE.BufferGeometry();
+            const positions = new Float32Array(lineCount * 2 * 3); 
+            linesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            const linesMat = new THREE.LineBasicMaterial({ color: color, transparent: true, opacity: 0.4 });
+            const linesMesh = new THREE.LineSegments(linesGeo, linesMat);
+            scene.add(linesMesh);
+
+            objects.push({ original: mesh, projected: projMesh, lines: linesMesh });
+        }
+
+        const light = new THREE.DirectionalLight(0xffffff, 1.2);
+        light.position.set(20, 40, 20);
+        scene.add(light);
+        scene.add(new THREE.AmbientLight(0x606060));
+
+        createSceneObject(new THREE.BoxGeometry(6, 6, 6), 0x00ff88, new THREE.Vector3(-8, 10, -25));
+        createSceneObject(new THREE.ConeGeometry(4, 10, 16), 0xff4444, new THREE.Vector3(10, -5, -35));
+
+        // 4. GUI & State Management
+        const state = {
+            // Intrinsics (K)
+            fx: 15, fy: 15, cx: 0, cy: 0,
+            // Extrinsics [R|t]
+            tX: 0, tY: 0, tZ: 0,
+            rX: 0, rY: 0, rZ: 0
+        };
+
+        const gui = new dat.GUI({ width: 320 });
+        
+        const folderInt = gui.addFolder('Camera Intrinsics (K matrix)');
+        folderInt.add(state, 'fx', 5, 40).name('Focal Length X (fx)');
+        folderInt.add(state, 'fy', 5, 40).name('Focal Length Y (fy)');
+        folderInt.add(state, 'cx', -10, 10).name('Principal Point X (cx)');
+        folderInt.add(state, 'cy', -10, 10).name('Principal Point Y (cy)');
+        folderInt.open();
+
+        const folderExt = gui.addFolder('Camera Extrinsics ([R|t])');
+        folderExt.add(state, 'tX', -20, 20).name('Translate X');
+        folderExt.add(state, 'tY', -20, 20).name('Translate Y');
+        folderExt.add(state, 'tZ', -20, 20).name('Translate Z');
+        folderExt.add(state, 'rX', -0.5, 0.5).name('Pitch (Rot X)');
+        folderExt.add(state, 'rY', -0.5, 0.5).name('Yaw (Rot Y)');
+        folderExt.add(state, 'rZ', -0.5, 0.5).name('Roll (Rot Z)');
+        folderExt.open();
+
+        // 5. Mathematical Projection Logic
+        function updateProjections() {
+            // Apply Extrinsics to Camera Rig
+            cameraRig.position.set(state.tX, state.tY, state.tZ);
+            cameraRig.rotation.set(state.rX, state.rY, state.rZ);
+            cameraRig.updateMatrixWorld();
+            
+            // THE FIX: Explicitly calculate the inverse matrix of the group
+            const rigInverse = cameraRig.matrixWorld.clone().invert();
+
+            objects.forEach(obj => {
+                obj.original.updateMatrixWorld();
+
+                const origPositions = obj.original.geometry.attributes.position.array;
+                const projPositions = obj.projected.geometry.attributes.position.array;
+                const linePositions = obj.lines.geometry.attributes.position.array;
+
+                for (let i = 0; i < origPositions.length; i += 3) {
+                    // 1. Get World Coordinate
+                    const localVec = new THREE.Vector3(origPositions[i], origPositions[i+1], origPositions[i+2]);
+                    const worldVec = localVec.clone().applyMatrix4(obj.original.matrixWorld);
+
+                    // 2. Extrinsics: Transform World -> Camera Local Space
+                    const camLocalVec = worldVec.clone().applyMatrix4(rigInverse);
+
+                    // To avoid projection explosions when objects pass behind the camera
+                    if (camLocalVec.z > 0) camLocalVec.z = -0.001; 
+
+                    // 3. Intrinsics: Transform Local -> Pixel Array (Projected onto the 3D plane)
+                    const zDepth = Math.abs(camLocalVec.z);
+                    
+                    const projX = - (camLocalVec.x / zDepth) * state.fx + state.cx;
+                    const projY = - (camLocalVec.y / zDepth) * state.fy + state.cy;
+                    const projZ = PLANE_DISTANCE; 
+
+                    // Update local wireframe mesh coordinates
+                    projPositions[i] = projX;
+                    projPositions[i+1] = projY;
+                    projPositions[i+2] = projZ;
+
+                    // 4. Update Rays (World Object -> Camera Local Projected Point converted back to World)
+                    const projWorldVec = new THREE.Vector3(projX, projY, projZ).applyMatrix4(cameraRig.matrixWorld);
+
+                    const lineIdx = (i / 3) * 6; 
+                    linePositions[lineIdx] = worldVec.x;
+                    linePositions[lineIdx+1] = worldVec.y;
+                    linePositions[lineIdx+2] = worldVec.z;
+
+                    linePositions[lineIdx+3] = projWorldVec.x;
+                    linePositions[lineIdx+4] = projWorldVec.y;
+                    linePositions[lineIdx+5] = projWorldVec.z;
+                }
+
+                obj.projected.geometry.attributes.position.needsUpdate = true;
+                obj.lines.geometry.attributes.position.needsUpdate = true;
+            });
+        }
+
+        // 6. 2D HTML Label Tracking
+        function updateLabels() {
+            const widthHalf = window.innerWidth / 2;
+            const heightHalf = window.innerHeight / 2;
+
+            function updateLabel(element, vector) {
+                const vec = vector.clone();
+                vec.project(camera); 
+                if (vec.z > 1) { 
+                    element.style.display = 'none';
+                    return;
+                }
+                element.style.display = 'block';
+                element.style.left = (vec.x * widthHalf) + widthHalf + 'px';
+                element.style.top = -(vec.y * heightHalf) + heightHalf + 'px';
+            }
+
+            const pinholePos = new THREE.Vector3(0, -1, 0).applyMatrix4(cameraRig.matrixWorld);
+            updateLabel(document.getElementById('label-pinhole'), pinholePos);
+
+            const planePos = new THREE.Vector3(0, 18, PLANE_DISTANCE).applyMatrix4(cameraRig.matrixWorld);
+            updateLabel(document.getElementById('label-imageplane'), planePos);
+        }
+
+        // 7. Render Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            updateProjections();
+            updateLabels();
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>
