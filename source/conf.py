@@ -2,7 +2,9 @@
 # CSCI 4900/6900 Computer Vision: The Deep Learning Approach
 
 import os
+import shutil
 import sys
+from pathlib import Path
 
 # -- Project information -----------------------------------------------------
 project = "Computer Vision: The Deep Learning Approach"
@@ -73,3 +75,25 @@ intersphinx_mapping = {
     "torch": ("https://pytorch.org/docs/stable/", None),
     "numpy": ("https://numpy.org/doc/stable/", None),
 }
+
+# -- Standalone HTML (iframe demos) -------------------------------------------
+# MyST pages reference camera.html / camera_params.html next to geometry.md;
+# Sphinx does not copy arbitrary .html from the source tree, so we mirror them
+# into the HTML output after each build (needed for GitHub Pages).
+
+
+def _copy_geometry_demos(app, exception):
+    if exception is not None:
+        return
+    sub = Path("5_supervised_geometry")
+    src_dir = Path(app.srcdir) / sub
+    dst_dir = Path(app.outdir) / sub
+    dst_dir.mkdir(parents=True, exist_ok=True)
+    for name in ("camera.html", "camera_params.html"):
+        src = src_dir / name
+        if src.is_file():
+            shutil.copy2(src, dst_dir / name)
+
+
+def setup(app):
+    app.connect("build-finished", _copy_geometry_demos)
