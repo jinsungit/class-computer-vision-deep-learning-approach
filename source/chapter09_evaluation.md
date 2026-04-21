@@ -1,7 +1,21 @@
 # Evaluation and benchmarks
 
-Metrics, benchmarks, and model comparison.
+How we measure vision systems, standard benchmark suites, and how to compare models beyond a single leaderboard number.
 
+```{toctree}
+:maxdepth: 1
+:caption: Evaluation fundamentals
+9_evaluation_benchmarks/fundamentals
+```
 
-- [LMArena](https://lmarena.ai/leaderboard/vision)
-- [LMArena Vision Tasks](https://news.lmarena.ai/re-introducing-vision-arena-categories/)
+```{toctree}
+:maxdepth: 1
+:caption: Vision benchmarks
+9_evaluation_benchmarks/vision_benchmarks
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Comparing models
+9_evaluation_benchmarks/comparison
+```

@@ -27,3 +27,5 @@ env/
 
 # Sphinx / Jupyter Book build output
 **/_build/
+# Accidental root-level outdir (e.g. sphinx-build -b html source build)
+/build/

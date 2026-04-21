@@ -7,7 +7,7 @@ Mixed text, figures, and code; structure follows the course outline from the int
 
 - **`source/`** — Sphinx source (Markdown `.md` files via MyST, `conf.py`, `_static/`, `_templates/`)
 - **`1.introduction.md`** — Original course intro/slides (reference)
-- **`build/`** — Generated output (created when you build)
+- **`source/_build/`** — Generated HTML (created when you build from `source/`; not committed)
 
 ### Chapters (from outline)
 

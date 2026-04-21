@@ -1,18 +1,21 @@
 # Bias and ethics
 
-Fairness, bias in vision systems, and ethical considerations.
+Fairness and bias in vision systems, privacy and harms, and responsible research and deployment practices.
 
-
-```{figure} https://libapps-ca.s3.amazonaws.com/accounts/159843/images/SD_Architect.jpg
-:width: 45%
-:alt: Example generated image (architect)
-
-Example: architect (generated).
+```{toctree}
+:maxdepth: 1
+:caption: Bias and fairness
+10_bias_ethics/bias_and_fairness
 ```
 
-```{figure} https://libapps-ca.s3.amazonaws.com/accounts/159843/images/SD_Housekeeper.jpg
-:width: 45%
-:alt: Example generated image (housekeeper)
+```{toctree}
+:maxdepth: 1
+:caption: Harms and privacy
+10_bias_ethics/harms_and_privacy
+```
 
-Example: housekeeper (generated).
+```{toctree}
+:maxdepth: 1
+:caption: Responsible practice
+10_bias_ethics/responsible_practice
 ```
